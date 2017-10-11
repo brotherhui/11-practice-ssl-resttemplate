@@ -10,7 +10,7 @@ A | A's public key | A's private key | A's key-store (include A's public and pri
 >
 B | B's public key | B's private key | B's key-store (include B's public and private key) | B's trust-store(include A's public key)
 
-###Scenario 1:  B provide SSL and anyone can access it
+#### Scenario 1:  B provide SSL and anyone can access it
 Just add into application.yml with 
 server:
   port: 8443
@@ -21,7 +21,7 @@ server:
 
 In this way, anyone can access https://localhost:8443/user from browser
 
-###Scenario 2:  B provide SSL and just trusted client can access it
+#### Scenario 2:  B provide SSL and just trusted client can access it
 >
 server:
   port: 8443
@@ -43,7 +43,7 @@ b. program the ssl certificate (add client's keystore and trusted store(which in
 In this way, anyone can access http://localhost:8080/door?uri=https://localhost:8443/user
 
 
-###Scenario 3:  A provide SSL too. Please follow the same settings like B
+#### Scenario 3:  A provide SSL too. Please follow the same settings like B
 
 ### Keys generate
 1. We can genreate the jks with a single cmd:
