@@ -1,4 +1,9 @@
-This example shows how a normal client calls ssl server's API. 
+Notice: There are 2 ways for a client to access B.
+
+1 set b's public certificate into JDK
+2 program the ssl certificate (add client's keystore and trusted store(which include B's public key) into SSLContext)
+
+This example shows how a normal client calls ssl server's API.  (2nd way)
 
 ### Key concepts
 Key-store: include public and private key
@@ -35,11 +40,7 @@ server:
     
 Only the clients with trusted public key can access B.
 
-Notice:
->
-There are 2 ways for a client to access B.
-a. set b's public certificate into JDK
-b. program the ssl certificate (add client's keystore and trusted store(which include B's public key) into SSLContext)
+#### Try
 In this way, anyone can access http://localhost:8080/door?uri=https://localhost:8443/user
 
 
